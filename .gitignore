@@ -58,3 +58,19 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+*.meta
+
+GameJam2023/Library/
+
+*.asset
+
+GameJam2023/ProjectSettings/ProjectVersion.txt
+
+GameJam2023/obj/Debug/
+
+*.log
+
+GameJam2023/ProjectSettings/
+
+GameJam2023/UserSettings/Layouts/
