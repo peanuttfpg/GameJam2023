@@ -1,21 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-
-public enum Priority
-    {
-        Low,
-        Medium,
-        High
-    }
-
+using UnityEngine.UI;
 public class GameTask : MonoBehaviour
 {
-    private string description { get; set; }
+    public string description;
 
-    private float time { get; set; }
+    [SerializeField]
+    public float time;
 
-    private string priority { get; set; }
+    public string priority;
+
+    private Button button;
+
+    void Start(){
+        button = GetComponent<Button>();
+        if (button != null)
+        {
+            button.GetComponentInChildren<TextMeshProUGUI>().text = description;
+        }
+    }
 
     public GameTask(){}
 
@@ -27,8 +32,18 @@ public class GameTask : MonoBehaviour
     }
 
     // Use integer index to access Priority enum
-    public void SetPriority(int index)
+    public void SetPriority(string priority)
     {
-        this.priority = ((Priority)index).ToString();
+        this.priority = priority;
+    }
+
+    public void DoTask()
+    {
+
+    }
+
+    public void TaskTransition()
+    {
+
     }
 }
